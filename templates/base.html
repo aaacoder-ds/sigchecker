@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SigChecker — PDF Signature Validation Tool</title>
+  <meta name="description" content="Digital PDF signature validation tool and document trust verifier." />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+  <script defer data-domain="sigchecker.aaacoder.xyz" src="https://track.sigchecker.aaacoder.xyz/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SigChecker",
+    "url": "https://sigchecker.aaacoder.xyz/",
+    "applicationCategory": "SecurityApplication",
+    "description": "Validate digital signatures in PDF documents online.",
+    "additionalType": "https://schema.org/DigitalSignature",
+    "potentialAction": {
+      "@type": "VerifyAction",
+      "name": "Validate PDF Signature",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://sigchecker.aaacoder.xyz/verify"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="container">
+    <h1><a href="/">SigChecker</a></h1>
+    <p class="tag">PDF signature validation tool and document trust verifier</p>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="container">
+    <p>Use this <strong>PDF signature validation tool</strong> as your <strong>document trust verifier</strong>.</p>
+    <p>&copy; 2025</p>
+  </footer>
+</body>
+</html>

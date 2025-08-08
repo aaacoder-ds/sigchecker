@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+  <section class="card">
+    <h2>Page not found</h2>
+    <p>The page you’re looking for doesn’t exist.</p>
+    <form action="/" method="get" onsubmit="return true;">
+      <input type="text" name="q" placeholder="Search…" />
+      <button type="submit">Search</button>
+    </form>
+    <p>You’ll be redirected shortly to our homepage.</p>
+    <p><a href="https://aaacoder.xyz/">Go to aaacoder.xyz</a></p>
+  </section>
+
+  <script>
+    setTimeout(function(){ window.location.href = 'https://aaacoder.xyz/'; }, 10000);
+  </script>
+{% endblock %}

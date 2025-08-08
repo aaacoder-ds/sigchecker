@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sigchecker.aaacoder.xyz/sitemap.xml

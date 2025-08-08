@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+  <section class="card">
+    <h2>Verification Results{% if filename %} — {{ filename }}{% endif %}</h2>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% elif message %}
+      <p>{{ message }}</p>
+    {% else %}
+      {% for r in results %}
+        <div class="result">
+          <p><strong>Integrity OK:</strong> {{ r.integrity_ok }}</p>
+          <p><strong>Trust OK:</strong> {{ r.trust_ok }}</p>
+          {% if r.summary %}<pre class="summary">{{ r.summary }}</pre>{% endif %}
+          {% if r.details %}<pre class="details">{{ r.details }}</pre>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <p><a href="/">Back</a></p>
+  </section>
+{% endblock %}
