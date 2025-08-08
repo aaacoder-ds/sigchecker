@@ -5,6 +5,8 @@ services:
     restart: unless-stopped
     environment:
       - PORT=8000
+    ports:
+      - "3087:8000"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.sigchecker.rule=Host(`sigchecker.aaacoder.xyz`)"
